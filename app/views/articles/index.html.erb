@@ -1,0 +1,10 @@
+<h1>Articlea</h1>
+
+<ul><% @articles.each do |article| %>
+  <li>
+    <h3><%= article.title %></h3>
+    <p> <%= link_to "Read more", article_path(article) %> </p>
+  </li>
+<% end %></ul>
+
+<h3> <%= link_to "Add a new article", new_article_path %> </h3>
